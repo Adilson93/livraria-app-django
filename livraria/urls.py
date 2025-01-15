@@ -4,5 +4,7 @@ from core import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("test/", views.test)
+    path("test/", views.test),
+    path("categorias/", views.CategoriaView.as_view()),
+    path("categorias/<int:id>/", views.CategoriaView.as_view())
 ]

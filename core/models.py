@@ -51,3 +51,6 @@ class ItensCompra(models.Model):
     quantidade = models.IntegerField()
 
 
+
+
+

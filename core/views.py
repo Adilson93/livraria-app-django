@@ -47,5 +47,3 @@ class CategoriaView(View):
         qs.delete()
         data = {'mensagem': "Item excluido com sucesso"}
         return JsonResponse(data)
-
-

@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_simplejwt",
     "drf_spectacular",
+    #CONFIGURAÇÃO PARA PERMITIR O ACESSO DA API POR DIFERENTES APLICAÇÕES EM SERVIDORES(INDEREÇOS) DIFERENTE
+    "corsheaders",
     # app
     "core",
 ]
@@ -38,6 +40,8 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    #CONFIGURAÇÃO PARA PERMITIR O ACESSO DA API POR DIFERENTES APLICAÇÕES EM SERVIDORES(INDEREÇOS) DIFERENTE
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -150,3 +154,6 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=180),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1)
 }
+
+#CONFIGURAÇÃO PARA PERMITIR O ACESSO DA API POR DIFERENTES APLICAÇÕES EM SERVIDORES(INDEREÇOS) DIFERENTE
+CORS_ALLOW_ALL_ORIGINS = True
